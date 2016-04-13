@@ -93,12 +93,14 @@ Source fields names (fields from original object). Fields that you want to use i
 ##### dest (`String` or `Array`)
 Destination fields names (fields created in mapped object). If array is passed fields from array will be created but `map` function should return array of values in order to properly populate fields' values.
 
-##### map (`Function`) _optional_
+##### map `Function`
+###### _optional_
 Transform function which maps `src` field(s) into `dest` field(s). Function gets parameter value(s) form field(s) specified in `src`. If `dest` is an array function should return array of values in order to properly populate fields' values.
 
 If map function is not defined `dest` field(s) should contain values from `src` field(s);
 
-##### revert (`Function`) _optional_
+##### revert (`Function`)
+###### _optional_
 Transform function which maps `dest` field(s) into `src` field(s). Function gets parameter value(s) form field(s) specified in `dest`. If `src` is an array function should return array of values in order to properly populate fields' values.
 
 You do not have to provide `revert` function unless you want to get the original data model.
