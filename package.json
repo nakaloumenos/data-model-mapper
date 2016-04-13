@@ -1,6 +1,6 @@
 {
   "name": "data-model-mapper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utility to map (and revert) data objects to another data model.",
   "main": "data-model-mapper.js",
   "repository": {
