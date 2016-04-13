@@ -58,7 +58,7 @@ var conf = [
 
 From now on, it's really simple. Just include data-model-mapper, create new instance of mapper, pass config array and map your object:
 
-```javascript`
+```javascript
 var DMM = require('data-model-mapper');
 
 var obj = {
