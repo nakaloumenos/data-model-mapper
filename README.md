@@ -43,7 +43,7 @@ var conf = [
         dest: 'id',
         src: 'ID'
     }, {
-        dest: 'accountCreation',
+        dest: 'lastLogin',
         src: ['DATE', 'TIME'],
         map: mapDateTime,
         revert: revertDateTime
