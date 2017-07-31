@@ -28,6 +28,8 @@ We want to transform it to match our model:
 We must create transform config:
 
 ```javascript
+var moment = require('moment');
+
 var mapDateTime = function (date, time) {
     return moment(date + time, 'YYYYMMDDHHmmss').toDate(); // moment.js library
 };
