@@ -162,10 +162,6 @@ var mapped = m.map_existing_keys(obj);
 ###### _optional_
 Transform function which maps only existing `src` field(s) in provided data into `dest` field(s). Function gets parameter value(s) form field(s) specified in `src`. If `dest` is an array function should return array of values in order to properly populate fields' values.
 
-If map function is not defined `dest` field(s) should contain values from `src` field(s);
-
 ##### revert_existing_keys `Function`
 ###### _optional_
 Transform function which maps only existing `dest` field(s) in provided data into `src` field(s). Function gets parameter value(s) form field(s) specified in `dest`. If `src` is an array function should return array of values in order to properly populate fields' values.
-
-You do not have to provide `revert` function unless you want to get the original data model.
