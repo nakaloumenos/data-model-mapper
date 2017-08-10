@@ -101,8 +101,71 @@ Transform function which maps `src` field(s) into `dest` field(s). Function gets
 
 If map function is not defined `dest` field(s) should contain values from `src` field(s);
 
-##### revert (`Function`)
+##### revert `Function`
 ###### _optional_
 Transform function which maps `dest` field(s) into `src` field(s). Function gets parameter value(s) form field(s) specified in `dest`. If `src` is an array function should return array of values in order to properly populate fields' values.
+
+You do not have to provide `revert` function unless you want to get the original data model.
+
+### New Functionality
+`map` (and `revert` respectively) creates every `dest` destination field specified in the in `conf`. If `src` does not exist then the value of `dest` will be equal to `undefined`:
+
+```javascript
+var DMM = require('data-model-mapper');
+
+var obj = {
+    DATE: '20160512',
+    TIME: '140000',
+    FIRST_NAME: 'John',
+    LAST_NAME: 'Doe'
+    //ID missing
+};
+
+var m = new DMM(conf);
+
+var mapped = m.map(obj);
+/* result is:
+{
+    id: undefined
+    lastLogin: Thu May 12 2016 14:00:00 GMT+0200 (CEST), // JS Date object
+    employeeName: 'John Doe'
+}
+*/
+```
+
+Even though this functionality may be useful in some cases, there are times when we want to map only the fields that exist in the data we provide:
+
+```javascript
+var DMM = require('data-model-mapper');
+
+var obj = {
+    DATE: '20160512',
+    TIME: '140000',
+    FIRST_NAME: 'John',
+    LAST_NAME: 'Doe'
+    //ID missing
+};
+
+var m = new DMM(conf);
+
+var mapped = m.map_existing_keys(obj);
+/* result is:
+{
+    //id is not created as ID is not found in the src
+    lastLogin: Thu May 12 2016 14:00:00 GMT+0200 (CEST), // JS Date object
+    employeeName: 'John Doe'
+}
+*/
+```
+
+##### map_existing_keys `Function`
+###### _optional_
+Transform function which maps only existing `src` field(s) in provided data into `dest` field(s). Function gets parameter value(s) form field(s) specified in `src`. If `dest` is an array function should return array of values in order to properly populate fields' values.
+
+If map function is not defined `dest` field(s) should contain values from `src` field(s);
+
+##### revert_existing_keys `Function`
+###### _optional_
+Transform function which maps only existing `dest` field(s) in provided data into `src` field(s). Function gets parameter value(s) form field(s) specified in `dest`. If `src` is an array function should return array of values in order to properly populate fields' values.
 
 You do not have to provide `revert` function unless you want to get the original data model.
