@@ -1,6 +1,7 @@
 MIT License
 
 Original work Copyright (c) 2016 Łukasz Strączyński
+
 Modified work Copyright (c )2017 Nikolaos Alexandros Kaloumenos 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
