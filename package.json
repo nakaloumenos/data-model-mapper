@@ -1,11 +1,11 @@
 {
-  "name": "data-model-mapper",
-  "version": "0.1.1",
+  "name": "data-model-mapper-plus",
+  "version": "1.0.0",
   "description": "Utility to map (and revert) data objects to another data model.",
-  "main": "data-model-mapper.js",
+  "main": "data-model-mapper-plus.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/luk112233/data-model-mapper.git"
+    "url": "https://github.com/nakaloumenos/data-model-mapper-plus"
   },
   "keywords": [
     "data",
@@ -20,12 +20,12 @@
     "db",
     "object"
   ],
-  "author": "Łukasz Strączyński",
+  "author": "Nikolaos Alexandros Kaloumenos",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/luk112233/data-model-mapper/issues"
+    "url": "https://github.com/nakaloumenos/data-model-mapper-plus/issues"
   },
-  "homepage": "https://github.com/luk112233/data-model-mapper",
+  "homepage": "https://github.com/nakaloumenos/data-model-mapper-plus",
   "dependencies": {
     "underscore": "^1.8.3"
   }
