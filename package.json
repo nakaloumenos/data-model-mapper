@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Utility to map (and revert) data objects to another data model.",
   "main": "data-model-mapper-plus.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nakaloumenos/data-model-mapper-plus"
+    "url": "git+https://github.com/nakaloumenos/data-model-mapper-plus.git"
   },
   "keywords": [
     "data",
@@ -20,12 +23,12 @@
     "db",
     "object"
   ],
-  "author": "Nikolaos Alexandros Kaloumenos",
+  "author": "Nikolaos Alexandros Kaloumenos <nakaloumenos@gmail.com> (http://goo.gl/ziVI2h)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nakaloumenos/data-model-mapper-plus/issues"
   },
-  "homepage": "https://github.com/nakaloumenos/data-model-mapper-plus",
+  "homepage": "https://github.com/nakaloumenos/data-model-mapper-plus#readme",
   "dependencies": {
     "underscore": "^1.8.3"
   }
