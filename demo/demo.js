@@ -53,3 +53,19 @@ console.log(mapped);
 
 var reverted = m.revert(mapped);
 console.log(reverted);
+
+var new_obj = {
+  DATE: '20160512',
+  TIME: '140000',
+  FIRST_NAME: 'John',
+  LAST_NAME: 'Doe'
+  //ID missing
+};
+
+console.log(new_obj);
+
+var new_mapped = m.map_existing_keys(new_obj);
+console.log(new_mapped);
+
+var new_reverted = m.revert_existing_keys(new_mapped);
+console.log(new_reverted);
